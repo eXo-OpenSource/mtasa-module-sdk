@@ -1,3 +1,0 @@
-[submodule "cpp_redis"]
-	path = cpp_redis
-	url = https://github.com/eXo-OpenSource/cpp_redis.git
