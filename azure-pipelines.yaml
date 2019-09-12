@@ -9,13 +9,11 @@ stages:
       submodules: 'recursive'
     - script: chmod +x utils/premake5 && utils/premake5 gmake
       displayName: 'Generate Makefile'
-    - script: chmod +x install-deps.sh && ./install-deps.sh
-      displayName: 'Install cpp_redis and tacopie'
     - script: cd Build && make -j 3 CXX=g++-7 CC=gcc-7 config=release_x64
       displayName: 'Build project'
-    - script: mv $(Build.SourcesDirectory)/Bin/Release/libml_redis.so $(Build.SourcesDirectory)/Bin/Release/ml_redis.so
-    - publish: '$(Build.SourcesDirectory)/Bin/Release/ml_redis.so'
-      artifact: 'ml_redis_linux'
+    - script: mv $(Build.SourcesDirectory)/Bin/Release/libml_NAME.so $(Build.SourcesDirectory)/Bin/Release/ml_NAME.so
+    - publish: '$(Build.SourcesDirectory)/Bin/Release/ml_NAME.so'
+      artifact: 'ml_NAME_linux'
   - job: Windows
     pool:
       vmImage: 'windows-2019'
@@ -27,7 +25,7 @@ stages:
         x64:
           platform: 'x64'
     variables:
-      solution: 'Build/Redis.sln'
+      solution: 'Build/NAME.sln'
       buildConfiguration: 'Release'
     steps:
     - checkout: self
@@ -39,6 +37,6 @@ stages:
         solution: '$(solution)'
         configuration: '$(buildConfiguration)'
         platform: '$(platform)'
-    - script: move /Y $(Build.SourcesDirectory)\Bin\Release\ml_redis.dll $(Build.SourcesDirectory)\Bin\Release\ml_redis_$(platform).dll
-    - publish: '$(Build.SourcesDirectory)\Bin\Release\ml_redis_$(platform).dll'
-      artifact: 'ml_redis_$(platform)'
+    - script: move /Y $(Build.SourcesDirectory)\Bin\Release\ml_NAME.dll $(Build.SourcesDirectory)\Bin\Release\ml_NAME_$(platform).dll
+    - publish: '$(Build.SourcesDirectory)\Bin\Release\ml_NAME_$(platform).dll'
+      artifact: 'ml_NAME_$(platform)'

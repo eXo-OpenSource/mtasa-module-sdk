@@ -24,9 +24,9 @@
 
 ## Download
 via https://github.com/Contextualist/glare
-* [Linux x64](https://glare.now.sh/eXo-OpenSource/ml_NAME/ml_redis.so)
-* [Windows x64](https://glare.now.sh/eXo-OpenSource/ml_NAME/ml_redis_x64.dll)
-* [Windows x86](https://glare.now.sh/eXo-OpenSource/ml_NAME/ml_redis_win32.dll)
+* [Linux x64](https://glare.now.sh/eXo-OpenSource/ml_NAME/ml_NAME.so)
+* [Windows x64](https://glare.now.sh/eXo-OpenSource/ml_NAME/ml_NAME_x64.dll)
+* [Windows x86](https://glare.now.sh/eXo-OpenSource/ml_NAME/ml_NAME_win32.dll)
 
 ## Contributors
 * Stefan K.
