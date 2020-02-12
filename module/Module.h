@@ -5,6 +5,7 @@
 
 #include "JobManager.h"
 #include "ILuaModuleManager.h"
+#include "Luna.h"
 
 struct lua_State;
 class ILuaModuleManager;

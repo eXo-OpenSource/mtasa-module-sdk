@@ -5,6 +5,8 @@
 #include <sstream>
 #include <unordered_map>
 
+#define method(class, name) {#name, &class::name}
+
 static const int index_value = -1;
 static const int index_key   = -2;
 

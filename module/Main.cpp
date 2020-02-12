@@ -1,9 +1,9 @@
 #include "Common.h"
 #include "CFunctions.h"
 #include "include/ILuaModuleManager.h"
-#include <cstring>
 #include "Module.h"
-#include <cassert>
+#include "LunaExampleClass.h"
+#include "LunaExampleClassHelper.h"
 
 #ifndef WIN32
 	#include "luaimports/luaimports.linux.h"
@@ -41,6 +41,9 @@ MTAEXPORT void RegisterFunctions(lua_State* lua_vm)
 
 	// Add lua vm to states list (to check validity)
 	g_Module->AddLuaVM(lua_vm);
+
+	// Register luna classes
+	LunaExampleClassHelper::Register(lua_vm);
 }
 
 MTAEXPORT bool DoPulse()
