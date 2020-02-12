@@ -29,4 +29,5 @@ via https://github.com/Contextualist/glare
 * [Windows x86](https://glare.now.sh/eXo-OpenSource/ml_NAME/ml_NAME_win32.dll)
 
 ## Contributors
+* Jusonex
 * Stefan K.
